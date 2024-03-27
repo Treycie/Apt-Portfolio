@@ -18,8 +18,12 @@ router.get("/:id", async (req, res) => {
   let query = { _id: new ObjectId(req.params.id) };
   let result = await PROJECTS_COLLECTION.findOne(query);
 
+
+  !result ? result("Not Found!").status(404) : res.send(result).status(200);
+
   !result ? result("Not Found!").status(404) :
     res.send(result).status(200);
+
 });
 
 //Endpoint for adding a single project
@@ -29,7 +33,10 @@ router.post("/",upload.single("image"), async (req, res) => {
       project: req.body.project,
       description: req.body.description,
       image: req.body.image,
+
+
       link: req.body.link,
+
     };
     let result = await PROJECTS_COLLECTION.insertOne(newProject);
     res.send(result).status(201);
@@ -47,8 +54,12 @@ router.patch("/:id",upload.single("image"), async (req, res) => {
         project: req.body.project,
         description: req.body.description,
         image: req.body.image,
+
+      },
+
         link: req.body.link
       }
+
     };
     let result = await PROJECTS_COLLECTION.updateOne(query, update);
     res.send(result).status(200);
