@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../components/header/header";
 import Navbar from "../../components/navbar/navbar"
 import Hero from "../../components/hero/hero";
 import Overview from "../../components/overview/overview";
@@ -11,7 +12,8 @@ import "../../../src/index.css"
 
 const Landingpage = () => {
   return (
-    <div>
+    <div className="bg-site bg-no-repeat bg-cover overflow-hidden">
+      <Header/>
       <Navbar />
       <Hero />
       <Overview />
@@ -20,6 +22,7 @@ const Landingpage = () => {
       <Projects />
       <Testimonials />
       <Contact />
+      <div className="h-[4000px]"></div>
     </div>
   );
 };
