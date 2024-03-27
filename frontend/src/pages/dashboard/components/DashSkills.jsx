@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DashboardLayout from "../../../layouts/DashboardLayout";
-import { apiGetAllSkills, apiAddSkill } from "../../../services/skills.services.js";
+import { apiGetAllSkills, apiAddSkill , apiDeleteSkill} from "../../../services/skills.services.js";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
@@ -36,6 +36,15 @@ const DashSkills = () => {
 
   }
 
+  const handleDeleteSkill = async (skillId) => {
+    try {
+      await apiDeleteSkill(skillId);
+      setSkills(skills.filter((skill) => skill._id !== skillId));
+    } catch (error) {
+      console.error("Error deleting skill:", error);
+    }
+  };
+
   const handleAddSkill = async (formData) => {
     try {
       const newSkill = await apiAddSkill(formData);
@@ -65,6 +74,7 @@ const DashSkills = () => {
               variant="contained"
               color="primary"
               onClick={handleAddNewSkill}
+              style={{ backgroundColor: "#800080" }}
             >
               Add New Skill
             </Button>
@@ -101,11 +111,11 @@ const DashSkills = () => {
                 <Typography>{skill.proficiency}</Typography>
 
                 <Stack direction="row" spacing={1}>
-                  <IconButton color="primary" aria-label="edit" onClick={() => handleEditSkill(skill)}>
+                  <IconButton color="primary" aria-label="edit" onClick={() => handleEditSkill(skill)} >
                     
-                    <EditIcon />
+                    <EditIcon  />
                   </IconButton>
-                  <IconButton color="error" aria-label="delete">
+                  <IconButton color="error" aria-label="delete" onClick={() => handleDeleteSkill(skill._id)}>
                     <DeleteIcon />
                   </IconButton>
                 </Stack>

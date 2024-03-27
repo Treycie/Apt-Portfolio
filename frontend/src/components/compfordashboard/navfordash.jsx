@@ -20,6 +20,13 @@ const variants = {
 const Navfordash = () => {
   const [isExpanded, setIsExpanded] = useState(true);
   const navigate = useNavigate();
+  
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked); // Toggle the state
+  };
+
 
   return (
     <motion.div
@@ -58,7 +65,7 @@ const Navfordash = () => {
 
       <div className="flex flex-col space-y-8 mt-12">
         <div className="nav-links w-full">
-          <div className="flex space-x-3 w-full p-2 rounded hover:cursor-pointer hover:bg-[#800080] text-white">
+          <div className={`flex space-x-3 w-full p-2 rounded hover:cursor-pointer ${isClicked ? 'bg-[#800080]' : ''} text-white`} onClick={handleClick}>
             <LayoutDashboard onClick={() => navigate("/dashboard/home")} />
             <span
               className={!isExpanded ? "hidden" : "block"}
@@ -71,7 +78,7 @@ const Navfordash = () => {
 
         <div className="nav-links w-full">
           <div className="flex space-x-3 w-full p-2 rounded hover:cursor-pointer hover:bg-[#800080] text-white">
-            <SquarePlusIcon onClick={() => navigate("/dashboard/skills")} />
+            <SquarePlusIcon onClick={() => navigate("/dashboard/skills")}  />
             <span
               className={!isExpanded ? "hidden" : "block"}
               onClick={() => navigate("/dashboard/skills")}

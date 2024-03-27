@@ -30,7 +30,7 @@ const Formforskills = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Stack direction="column" spacing={2}>
+      <Stack direction="column" spacing={4}>
         <TextField
           label="Name of Skill"
           name="skill"
@@ -50,7 +50,7 @@ const Formforskills = ({ onSubmit }) => {
           <MenuItem value="Intermediate">Intermediate</MenuItem>
           <MenuItem value="Advanced">Advanced</MenuItem>
         </TextField>
-        <Button type="submit" variant="contained" color="primary">
+        <Button type="submit" variant="contained" style={{ backgroundColor: "#800080" }}>
           Add Skill
         </Button>
       </Stack>
