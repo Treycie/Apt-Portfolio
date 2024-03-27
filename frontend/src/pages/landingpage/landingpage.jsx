@@ -7,6 +7,7 @@ import Skills from "../../components/skills/skills";
 import Projects from "../../components/projects/projects";
 import Testimonials from "../../components/testimonials/testimonials";
 import Contact from "../../components/contact/contact";
+import "../../../src/index.css"
 
 const Landingpage = () => {
   return (
