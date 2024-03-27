@@ -1,10 +1,13 @@
 import { Router } from "express";  
 import db from "../db/connection.js";
 import { ObjectId } from "mongodb";
+import multer from "multer"
 
 
 const router = Router();
 const EXPERIENCES_COLLECTION = db.collection("experiences");
+const upload = multer({dest:"upload/images"});
+
 
 // Endpoint for getting list of experience
 router.get("/", async(req, res)=>{
@@ -20,7 +23,7 @@ router.get("/:id", async (req, res) => {
     else res.send(result).status(200);
 });
 // Endpoint for adding a single experience
-router.post("/", async (req, res)=> {
+router.post("/",upload.single("image"), async (req, res)=> {
     try {
         let newExperience = { 
             experience: req.body.experience,
@@ -36,7 +39,7 @@ router.post("/", async (req, res)=> {
     }
 });
 // Emdpoint for updating a experience by the Id
-router.patch("/:id", async (req, res) => {
+router.patch("/:id",upload.single("image"), async (req, res) => {
     try {
     const query = {_id: new ObjectId(req.params.id) };
     const updates={

@@ -1,3 +1,4 @@
+import  "./App.css"
 import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import Blogs from './pages/blogs/blogs';
 import Landingpage from './pages/landingpage/landingpage';
