@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import "../../../src/index.css";
+import DashboardLayout from "../../layouts/DashboardLayout";
 
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
 
-export default Dashboard
+  return (
+    <DashboardLayout>
+      {/* <Mainfordash /> */}
+    </DashboardLayout>
+  );
+};
+
+export default Dashboard;
