@@ -9,6 +9,7 @@ import Projects from "../../components/projects/projects";
 //import Testimonials from "../../components/testimonials/testimonials";
 import Contact from "../../components/contact/contact";
 import "../../../src/index.css"
+import Skills from "../../components/skills/skills";
 
 const Landingpage = () => {
   return (
@@ -18,6 +19,7 @@ const Landingpage = () => {
       <Hero />
       <Overview />
       <Workexperience />
+      <Skills/>
       <Projects />
       <Contact />
     </div>
