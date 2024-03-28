@@ -22,10 +22,23 @@ const Blogs = () => {
     {
       title:
         " From Syntax to Sorcery: Mastering JavaScript for Dynamic Web Experiences",
+
       img: "https://i.ibb.co/DYxtCJq/img-1.png",
       content: "",
       date: "Oct 5, 2023",
     },
+    {
+      title:
+        " Mastering GitHub: A Comprehensive Guide to Streamlining Development Workflows",
+        " Exploring Git: Repositories, Discussion groups, Issues & Features",
+      img: "https://i.ibb.co/DYxtCJq/img-1.png",
+      content: "",
+      date: "Oct 5, 2023",
+    },
+
+    {
+      title:
+        " The Art of React.js: Designing Elegant and Efficient User Interfaces",
     {
       title:
         " Mastering GitHub: A Comprehensive Guide to Streamlining Development Workflows",
@@ -42,6 +55,10 @@ const Blogs = () => {
       date: "Oct 5, 2023",
     },
 
+
+    {
+      title:
+        " Express.js Essentials: A Deep Dive into Building Scalable and Maintainable APIs",
     {
       
       title:
@@ -73,7 +90,7 @@ const handleReadMore = (title) => {
   window.open(searchUrl, "_blank");
 };
 
- return (
+
     <>
       <div
         className="text-4xl font-bold leading-9
