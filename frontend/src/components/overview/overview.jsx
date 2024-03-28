@@ -20,14 +20,17 @@ const Overview = () => {
             className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
           ></motion.div>
 
-          <motion.div variants={fadeIn("right, 0.7")}
+          <motion.div
+            variants={fadeIn("right, 0.7")}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }} className="flex-1">
+            viewport={{ once: false, amount: 0.4 }}
+            className="flex-1"
+          >
             <h2 className="h2 text-accent">About me</h2>
             <h3 className="h3 mb-4">
               {" "}
-              I am a Full Stack Web Developer with 2 years of experience.
+              I am a Full Stack Web Developer with 1 year of experience.
             </h3>
             <p className="mb-6">
               I develop and maintain professional websites (the overall look and
@@ -42,7 +45,7 @@ const Overview = () => {
                 </div>
 
                 <div className="font-primary text-sm tracking-[2px]">
-                  Years of <br />
+                  Year of <br />
                   Experience
                 </div>
               </div>
@@ -67,12 +70,7 @@ const Overview = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-x-8 items-center">
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
-              </a>
-            </div>
+            
           </motion.div>
         </div>
       </div>

@@ -6,10 +6,8 @@ import Button from "@mui/material/Button";
 const Formforexperience = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
     experience: "",
-    role: "",
-    organization: "",
-    duration: "",
-    location: "",
+    role: ""
+    
   });
 
   const handleInputChange = (e) => {
@@ -25,10 +23,8 @@ const Formforexperience = ({ onSubmit }) => {
     onSubmit(formData);
     setFormData({
       experience: "",
-      role: "",
-      organization: "",
-      duration: "",
-      location: "",
+      role: ""
+      
     });
   };
 
@@ -49,29 +45,7 @@ const Formforexperience = ({ onSubmit }) => {
           onChange={handleInputChange}
           required
         />
-        <TextField
-          label="Organization"
-          name="organization"
-          value={formData.organization}
-          onChange={handleInputChange}
-          required
-        />
-        <TextField
-          label="Duration (in months)"
-          name="duration"
-          type="number"
-          value={formData.duration}
-          onChange={handleInputChange}
-          required
-        />
-        <TextField
-          label="Location"
-          name="location"
-          type="location"
-          value={formData.location}
-          onChange={handleInputChange}
-          required
-        />
+        
         <Button
           type="submit"
           variant="contained"

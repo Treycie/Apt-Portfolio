@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import RightArrowIcon from "../../assets/svg/rightArrow.svg";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import Profile from "../../assets/images/profile-picture.png";
 
 const variants = {
@@ -79,11 +79,13 @@ const Navfordash = () => {
       </div>
 
       <div className="flex items-center gap-4">
-        <img
-          className="w-10 h-10 rounded-full"
-          src={Profile}
-          alt="Rounded avatar"
-        />
+        <Link to="/">
+          <img
+            className="w-10 h-10 rounded-full"
+            src={Profile}
+            alt="Rounded avatar"
+          />
+        </Link>
         <div className="font-medium text-white">
           <div className={!isExpanded ? "hidden" : "block font-bold text-3xl"}>
             Valerie

@@ -2,7 +2,7 @@ import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import Blogs from './pages/blogs/blogs';
 import Landingpage from './pages/landingpage/landingpage';
 import Dashboard from './pages/dashboard/dashboard';
-import Article from "./pages/blogs/article";
+// import Article from "./pages/blogs/article";
 import  "./App.css"
 import "../src/index.css";
 import DashSkills from "./pages/dashboard/components/DashSkills";
@@ -16,7 +16,7 @@ const router = createBrowserRouter ([
   {path: "/", element: <Landingpage/>},
   {path: "/blogs", element: <Blogs/>},
   {path: "/dashboard", element: <Dashboard/>},
-  {path: "/blogs/:id", element: <Article/>},
+  // {path: "/blogs/:id", element: <Article/>},
   { path: "/dashboard/home", element: <Mainfordash /> },
   { path: "/dashboard/skills", element: <DashSkills /> },
   { path: "/dashboard/achievements", element: <Dashachievements /> },
