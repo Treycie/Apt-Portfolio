@@ -1,6 +1,5 @@
 import { apiClient } from "./config.js";
 
-<<<<<<< HEAD
 export const apiGetAllExperiences = async () => {
   return apiClient.get("/experiences");
 };
@@ -20,6 +19,3 @@ export const apiDeleteExperience = async (id) => {
 export const apiUpdateExperience = async (id, payload) => {
   return apiClient.patch(`/experiences/${id}`, payload);
 };
-=======
-
->>>>>>> develop

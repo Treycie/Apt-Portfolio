@@ -73,7 +73,7 @@ setModalOpen(true);
                     <CardMedia
                       component="img"
                       height="140"
-                      image={`${process.env.REACT_APP_URL}/${project.image}`}
+                      image={`${project.image}`}
                       alt={project.project}
                     />
                     <CardContent>

@@ -1,6 +1,5 @@
 import { apiClient } from "./config.js";
 
-<<<<<<< HEAD
 export const apiGetAllSkills = async () => {
   return apiClient.get("/skills");
 };
@@ -20,8 +19,3 @@ export const apiDeleteSkill = async (id) => {
 export const apiUpdateSkill = async (id, payload) => {
   return apiClient.patch(`/skills/${id}`, payload);
 };
-=======
-
-
-
->>>>>>> develop
