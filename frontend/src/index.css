@@ -81,18 +81,8 @@
     color: #B809C3; 
   }
   .lg\:bg-services {
-    background-image: url(../src/assets/images/services.png);
+    background-image: url(../src/assets/images/about.png);
   }
   
 
 
-
-.bg-site{
-    background-image: url(./assets/images/site-bg.jpg);
-}
-
-
-
-.bg-site{
-    background-image: url(./assets/images/site-bg.jpg);
-}
