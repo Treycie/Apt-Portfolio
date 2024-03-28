@@ -13,9 +13,9 @@ export const apiAddProject = async (payload) => {
 };
 
 export const apiDeleteProject = async (id) => {
-    return apiClient.delete(`/projects/${id}`);
-  };
+  return apiClient.delete(`/projects/${id}`);
+};
 
-  export const apiUpdateProject = async (id) => {
-    return apiClient.patch(`/projects/${id}`);
-}
+export const apiUpdateProject = async (id, payload) => {
+  return apiClient.patch(`/projects/${id}`, payload);
+};

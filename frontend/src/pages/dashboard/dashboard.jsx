@@ -1,12 +1,11 @@
 import React from "react";
-import "../../../src/index.css";
 import DashboardLayout from "../../layouts/DashboardLayout";
+import Mainfordash from "../../components/compfordashboard/mainfordash";
 
 const Dashboard = () => {
-
   return (
-    <DashboardLayout>
-      {/* <Mainfordash /> */}
+    <DashboardLayout title={"Dashboard"}>
+      <Mainfordash />
     </DashboardLayout>
   );
 };

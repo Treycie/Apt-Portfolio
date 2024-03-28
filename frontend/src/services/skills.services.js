@@ -13,9 +13,9 @@ export const apiAddSkill = async (payload) => {
 };
 
 export const apiDeleteSkill = async (id) => {
-    return apiClient.delete(`/skills/${id}`);
-  };
+  return apiClient.delete(`/skills/${id}`);
+};
 
-  export const apiUpdateSkill = async (id) => {
-    return apiClient.patch(`/skills/${id}`);
-}
+export const apiUpdateSkill = async (id, payload) => {
+  return apiClient.patch(`/skills/${id}`, payload);
+};
