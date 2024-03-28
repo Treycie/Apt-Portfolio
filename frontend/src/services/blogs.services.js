@@ -8,7 +8,7 @@ export const apiGetBlog = async(id) => {
 return apiClient
 }
 
-export const apiAddBlogs = async (newBlog) => {
+export const apiAddBlog = async (newBlog) => {
     return apiClient.post("/blogs", newBlog);
   };
   
