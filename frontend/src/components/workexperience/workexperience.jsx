@@ -32,7 +32,7 @@ const workExperiences = [
 
 const Workexperience = () => {
   return (
-    <section className="section" id="workexperience">
+    <section className="section my-24" id="workexperience">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
 
