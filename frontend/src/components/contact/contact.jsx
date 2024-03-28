@@ -19,7 +19,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <form className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-20 p-6 items-start">
+          <form className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start">
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="text"
