@@ -1,9 +1,11 @@
 import { Router } from "express";
 import db from "../db/connection.js";
 import { ObjectId } from "mongodb";
+import multer from "multer"
 
 const router = Router();
 const BLOGS_COLLECTION = db.collection("blogs");
+const upload = multer({dest:"upload/images"});
 
 //Endpoint for getting list of blogs
 router.get("/", async (req, res) => {
@@ -20,12 +22,13 @@ router.get("/:id", async (req, res) => {
 });
 
 //End for adding a single post
-router.post("/", async (req, res) => {
+router.post("/",upload.single("image"), async (req, res) => {
   try {
     let newBlog = {
       title: req.body.title,
       article: req.body.article,
       image: req.body.image,
+      date:req.body.date,
     };
     let result = await BLOGS_COLLECTION.insertOne(newBlog);
     res.send(result).status(201);
@@ -35,7 +38,7 @@ router.post("/", async (req, res) => {
 });
 
 //Endpoint for updating new post by id
-router.patch("/:id", async (req, res) => {
+router.patch("/:id",upload.single("image"), async (req, res) => {
   try {
     const query = { _id: new ObjectId(req.params.id) };
     const updates = {
@@ -43,6 +46,7 @@ router.patch("/:id", async (req, res) => {
         title: req.body.title,
         article: req.body.article,
         image: req.body.image,
+        date:req.body.date,
       },
     };
     let result = await BLOGS_COLLECTION.updateOne(query, updates);

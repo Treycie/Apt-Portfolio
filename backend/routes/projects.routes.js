@@ -1,9 +1,11 @@
 import { Router } from "express";
 import db from "../db/connection.js";
 import { ObjectId } from "mongodb";
+import multer from "multer"
 
 const router = Router();
 const PROJECTS_COLLECTION = db.collection("projects");
+const upload = multer({dest:"upload/images"});
 
 // Endpoint for getting list of projects
 router.get("/", async (req, res) => {
@@ -16,17 +18,18 @@ router.get("/:id", async (req, res) => {
   let query = { _id: new ObjectId(req.params.id) };
   let result = await PROJECTS_COLLECTION.findOne(query);
 
-  !result ? result("Not Found!").status(404): 
-  res.send(result).status(200);
+  !result ? result("Not Found!").status(404) :
+    res.send(result).status(200);
 });
 
 //Endpoint for adding a single project
-router.post("/", async (req, res) => {
+router.post("/",upload.single("image"), async (req, res) => {
   try {
     let newProject = {
       project: req.body.project,
       description: req.body.description,
-      image: req.body.image
+      image: req.body.image,
+      link: req.body.link,
     };
     let result = await PROJECTS_COLLECTION.insertOne(newProject);
     res.send(result).status(201);
@@ -36,14 +39,15 @@ router.post("/", async (req, res) => {
 });
 
 //Endpoint for updating a project by id
-router.patch("/:id", async (req, res) => {
+router.patch("/:id",upload.single("image"), async (req, res) => {
   try {
     const query = { _id: new ObjectId(req.params.id) };
     const update = {
       $set: {
         project: req.body.project,
-      description: req.body.description,
-      image: req.body.image
+        description: req.body.description,
+        image: req.body.image,
+        link: req.body.link
       }
     };
     let result = await PROJECTS_COLLECTION.updateOne(query, update);

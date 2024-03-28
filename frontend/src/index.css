@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .btn {
     background: linear-gradient(
       92.23deg,
@@ -83,3 +84,9 @@
     background-image: url(../src/assets/images/services.png);
   }
   
+
+
+
+.bg-site{
+    background-image: url(./assets/images/site-bg.jpg);
+}
