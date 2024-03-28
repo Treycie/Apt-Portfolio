@@ -4,17 +4,19 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const Formforskills = ({ onSubmit }) => {
+const Formforskills = ({ onSubmit, selectedData }) => {
   const [formData, setFormData] = useState({
-    skill: "",
-    proficiency: "Beginner" // Default proficiency level
+    skill: selectedData?.skill || "",
+    proficiency: selectedData?.proficiency || "Beginner", // Default proficiency level
   });
+
+  const isEdit = selectedData ? true : false;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -24,7 +26,7 @@ const Formforskills = ({ onSubmit }) => {
     // Reset form fields after submission
     setFormData({
       name: "",
-      proficiency: "Beginner"
+      proficiency: "Beginner",
     });
   };
 
@@ -50,8 +52,12 @@ const Formforskills = ({ onSubmit }) => {
           <MenuItem value="Intermediate">Intermediate</MenuItem>
           <MenuItem value="Advanced">Advanced</MenuItem>
         </TextField>
-        <Button type="submit" variant="contained" style={{ backgroundColor: "#800080" }}>
-          Add Skill
+        <Button
+          type="submit"
+          variant="contained"
+          style={{ backgroundColor: "#800080" }}
+        >
+          {isEdit ? "Update Skill" : "Add Skill"}
         </Button>
       </Stack>
     </form>

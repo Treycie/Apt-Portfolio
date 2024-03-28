@@ -16,6 +16,6 @@ export const apiDeleteAchievement = async (id) => {
   return apiClient.delete(`/achievements/${id}`);
 };
 
-export const apiUpdateAchievement = async (id) => {
-    return apiClient.patch(`/achievements/${id}`);
-}
+export const apiUpdateAchievement = async (id, payload) => {
+  return apiClient.patch(`/achievements/${id}`, payload);
+};

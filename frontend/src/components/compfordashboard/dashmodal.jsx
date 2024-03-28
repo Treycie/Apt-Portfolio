@@ -11,7 +11,7 @@ const DashModal = ({children, isOpen, closeModal}) => {
           marginRight: "-50%",
           transform: "translate(-50%, -50%)",
           width: "80%", // Adjust the width as needed
-          height: "40%",
+          height: "80%",
         maxWidth: "600px", // Set a maximum width if necessary
         maxHeight: "80%", // Set a maximum height if necessary
         overflow: "auto"
