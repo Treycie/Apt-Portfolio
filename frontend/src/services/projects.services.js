@@ -1,3 +1,10 @@
 import { apiClient } from "./config.js";
 
-// your code goes here
+import {apiClient} from "./config";
+
+export const apiGetAllProjects =async() => {
+    return apiClient.get("/skills");
+};
+export const apiGetProject = async(id) => {
+return apiClient
+}
