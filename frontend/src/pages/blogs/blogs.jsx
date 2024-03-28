@@ -56,6 +56,7 @@ const Blogs = () => {
       date: "Oct 5, 2023",
     },
 
+<<<<<<<<< Temporary merge branch 1
     {
       title:
         " Exploring Git: Repositories, Discussion groups, Issues & Features",
@@ -86,6 +87,7 @@ const Blogs = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
 
   const handleReadMore = (title) => {
     const searchQuery = encodeURIComponent(title);
