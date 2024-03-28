@@ -27,7 +27,7 @@ const Overview = () => {
             <h2 className="h2 text-accent">About me</h2>
             <h3 className="h3 mb-4">
               {" "}
-              I am a Full Stack Web Developer with 1 year of experience.
+              I am a Full Stack Web Developer with 2 years of experience.
             </h3>
             <p className="mb-6">
               I develop and maintain professional websites (the overall look and
@@ -38,7 +38,7 @@ const Overview = () => {
             <div className="flex gap-x-6 lg:gap-x-10 mb-12">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={1} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={2} duration={3} /> : null}
                 </div>
 
                 <div className="font-primary text-sm tracking-[2px]">

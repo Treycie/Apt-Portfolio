@@ -7,19 +7,19 @@ const workExperiences = [
   {
     name: "UI/UX Design",
     description:
-      "Gathered and evaluated user requirements, in collaboration with product managers and engineers. Illustrated design ideas using storyboards, process flows and sitemaps.",
+      "Gathered and evaluated user requirements, in collaboration with product managers and engineers.",
     link: "Learn more",
   },
   {
     name: "Development of Movie App",
     description:
-      "Wrote well designed, testable, efficient code by using best software development practices and cooperate with web designers to match visual design intent.",
+      "Wrote well designed, testable, efficient code by using best software development practices.",
     link: "Learn more",
   },
   {
     name: "Development of E-Commence App",
     description:
-      "Wrote well designed, testable, efficient code by using best software development practices and cooperate with web designers to match visual design intent.",
+      "Wrote well designed, testable, efficient code by using best software development practices.",
     link: "Learn more",
   },
   {
