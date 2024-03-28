@@ -7,13 +7,13 @@ const workExperiences = [
   {
     name: "UI/UX Design",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
+      "Gather and evaluate user requirements, in collaboration with product managers and engineers. Illustrating design ideas using storyboards, process flows and sitemaps.",
     link: "Learn more",
   },
   {
     name: "Development of Movie App",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
+      "Write well designed, testable, efficient code by using best software development practices and cooperate with web designers to match visual design intent.",
     link: "Learn more",
   },
   {
