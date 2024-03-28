@@ -1,9 +1,11 @@
 import { Router } from "express";
 import db from "../db/connection.js";
 import { ObjectId } from "mongodb";
+import multer from "multer"
 
 const router = Router();
 const ACHIEVEMENT_COLLECTION = db.collection("achievements");
+const upload = multer({dest:"upload/images"});
 
 //Endpoint for getting list of achievements
 router.get("/", async (req, res) => {
@@ -21,7 +23,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //Endpoint for adding a single achievement
-router.post("/", async (req, res) => {
+router.post("/",upload.single("image"), async (req, res) => {
   try {
     let newAchievement = {
       achievement: req.body.achievement,
@@ -35,7 +37,7 @@ router.post("/", async (req, res) => {
 });
 
 //Endpoint for updating an achievement by id
-router.patch("/:id", async (req, res) => {
+router.patch("/:id",upload.single("image"), async (req, res) => {
   try {
     const query = { _id: new ObjectId(req.params.id) };
     let updates = {
