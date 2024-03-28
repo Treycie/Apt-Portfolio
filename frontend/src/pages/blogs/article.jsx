@@ -1,18 +1,18 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const Article = () => {
   const location =  useLocation()
-//   console.log(location.state)
+
 
 const post = location.state
 
    
   return (
-    <>
+    <div className='text-black'>
     <div>{post.title}</div>
     <div>{post.content}</div>
-    </>
+    </div>
   )
 }
 

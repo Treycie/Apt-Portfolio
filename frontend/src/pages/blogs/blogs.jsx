@@ -55,15 +55,7 @@ const Blogs = () => {
       content: "",
       date: "Oct 5, 2023",
     },
-
-<<<<<<<<< Temporary merge branch 1
-    {
-      title:
-        " Exploring Git: Repositories, Discussion groups, Issues & Features",
-      img: "",
-      content: "This post will cover topic of exploring Git",
-      date: "Nov 3, 2023",
-    },
+     
 
     {
       
@@ -106,12 +98,12 @@ const Blogs = () => {
 
       <div className="flex flex-wrap justify-center gap-5  items-stretch">
       {blogs.map((post, index) => (
-        <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-5 flex">
+        <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-5 flex text-black">
           <div className="bg-white shadow-md shadow-black rounded-xl p-5 hover:bg-gray-100 flex flex-col justify-between">
-            <h1 className="text-2xl text-wrap font-bold mt-4">{post.title}</h1>
-            <img src={post.img} className="mx-auto" alt={post.title} />
+            <h1 className="text-2xl text-wrap font-bold mt-4 ">{post.title}</h1>
+            <img src={post.image} className="mx-auto" alt={post.title} />
             <p className="text-center">{post.date}</p>
-            <p className="text-center">{post.content}</p>
+            <p className="text-center">{post.article}</p>
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
               onClick={() => navigate(`/blogs/${post._id}`, {state: post})}
