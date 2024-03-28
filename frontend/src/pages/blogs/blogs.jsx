@@ -86,6 +86,11 @@ const Blogs = () => {
   //   const searchUrl = `https://medium.com/search?q=${searchQuery}`;
   //   window.open(searchUrl, "_blank");
   // };
+  const handleReadMore = (title) => {
+    const searchQuery = encodeURIComponent(title);
+    const searchUrl = `https://medium.com/search?q=${searchQuery}`;
+    window.open(searchUrl, "_blank");
+  };
 
   return (
     <>
@@ -100,6 +105,7 @@ const Blogs = () => {
       {blogs.map((post, index) => (
         <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-5 flex text-black">
           <div className="bg-purple-500 shadow-md shadow-black rounded-xl p-5 hover:bg-gray-100 flex flex-col justify-between">
+          <div className="bg-white shadow-md shadow-black rounded-xl p-5 hover:bg-gray-100 flex flex-col justify-between">
             <h1 className="text-2xl text-wrap font-bold mt-4 ">{post.title}</h1>
             <img src={post.image} className="mx-auto" alt={post.title} />
             <p className="text-center">{post.date}</p>

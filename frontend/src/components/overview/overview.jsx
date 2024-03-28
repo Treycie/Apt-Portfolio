@@ -27,7 +27,7 @@ const Overview = () => {
             <h2 className="h2 text-accent">About me</h2>
             <h3 className="h3 mb-4">
               {" "}
-              I am a Full Stack Web Developer with 1 year of experience.
+              I am a Full Stack Web Developer with 2 years of experience.
             </h3>
             <p className="mb-6">
               I develop and maintain professional websites (the overall look and
