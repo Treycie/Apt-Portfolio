@@ -11,6 +11,7 @@ const Header = () => {
         </a>
         <button className='btn btn-sm'>Download CV</button>
         <button className='btn btn-sm'>Dashboard</button>
+        <button className='btn btn-sm'>Blog</button>
        </div>
     </div>
   </header>

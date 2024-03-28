@@ -6,11 +6,11 @@ import Img3 from '../../assets/images/portfolio-img3.png'
 const Projects = () => {
   return (
     <section className='section' id='work'>
-      <div className='container mx-auto pt-96'>
-        <div className='flex flex-col lg:flex-row gap-x-10'>
+      <div className='container mx-auto'>
+        <div className='flex flex-col lg:flex-row gap-x-10 pt-28'>
           <div className='flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0'>
             <div>
-              <h2 className='h2 leading-tight tex-accent'>My Curent <br />Work</h2>
+              <h2 className='h2 leading-tight tex-accent'>My Current <br />Work</h2>
               <p className='max-w-sm mb-16'>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
               <button className='btn btn-sm'>View all projects</button>
             </div>

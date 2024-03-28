@@ -77,9 +77,9 @@
     background-image: url(../src/assets/images/about.png);
   }
   .text-accent {
-    color: #B809C3; /* or any color you prefer */
+    color: #B809C3; 
   }
-  .bg-services {
+  .lg\:bg-services {
     background-image: url(../src/assets/images/services.png);
   }
   
