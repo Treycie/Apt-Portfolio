@@ -8,47 +8,47 @@ const Blogs = () => {
     {
       title:
         " Exploring Git: Repositories, Discussion groups, Issues & Features",
-      img: "https://i.ibb.co/DYxtCJq/img-1.png",
+      img: "",
       content: "This post will cover topic of exploring Git",
-      date: "Oct 5, 2023",
+      date: "March 10, 2024",
     },
     {
       title:
         "Mastering the Art of Frontend and Backend Development: A Comprehensive Guide for Beginners and Beyond ",
-      img: "https://i.ibb.co/DYxtCJq/img-1.png",
+      img: "This post will cover topic of exploring frontend and backend",
       content: "",
-      date: "Oct 5, 2023",
+      date: "Feb 7, 2024",
     },
     {
       title:
         " From Syntax to Sorcery: Mastering JavaScript for Dynamic Web Experiences",
-      img: "https://i.ibb.co/DYxtCJq/img-1.png",
-      content: "",
-      date: "Oct 5, 2023",
+      img: "",
+      content: "This post will cover topic of exploring Javascript",
+      date: "Jan 5, 2024",
     },
     {
       title:
         " Mastering GitHub: A Comprehensive Guide to Streamlining Development Workflows",
-        img: "https://i.ibb.co/DYxtCJq/img-1.png",
-      content: "",
-      date: "Oct 5, 2023",
+        img: "",
+      content: "This post will cover topic of exploring Git",
+      date: "Dec 4, 2023",
     },
 
     {
       title:
         " Exploring Git: Repositories, Discussion groups, Issues & Features",
-      img: "https://i.ibb.co/DYxtCJq/img-1.png",
-      content: "",
-      date: "Oct 5, 2023",
+      img: "",
+      content: "This post will cover topic of exploring Git",
+      date: "Nov 3, 2023",
     },
 
     {
       
       title:
         " Exploring Git: Repositories, Discussion groups, Issues & Features",
-      img: "https://i.ibb.co/DYxtCJq/img-1.png",
-      content: "",
-      date: "Oct 5, 2023",
+      img: "",
+      content: "This post will cover topic of exploring Git",
+      date: "Oct 2, 2023",
     },
   ];
 
@@ -82,10 +82,10 @@ const handleReadMore = (title) => {
         <h1>Blogs</h1>
       </div>
      
-      <div className="flex flex-wrap justify-center gap-5  items-stretch">
+      <div className="bg-gray-800 flex flex-wrap justify-center gap-5  items-stretch">
         {data.map((post, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-5 flex">
-            <div className="bg-white shadow-md shadow-black rounded-xl p-5 hover:bg-gray-100 flex flex-col justify-between">
+            <div className="bg-white shadow-md shadow-black rounded-xl p-5 hover:bg-gray-500 flex flex-col justify-between">
               <h1 className="text-2xl text-wrap font-bold mt-4">
                 {post.title}
               </h1>
