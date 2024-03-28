@@ -79,4 +79,7 @@
   .text-accent {
     color: #B809C3; /* or any color you prefer */
   }
+  .bg-services {
+    background-image: url(../src/assets/images/services.png);
+  }
   

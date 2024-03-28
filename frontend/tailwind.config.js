@@ -27,7 +27,6 @@ module.exports = {
       },
       backgroundImage: {
         about: "url('./assets/about.png')",
-        services: "url('./assets/services.png')",
       },
     },
     extend: {},
