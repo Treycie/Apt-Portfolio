@@ -1,7 +1,7 @@
 import React from "react";
-import Img1 from "../../assets/images/portfolio-img1.png";
-import Img2 from "../../assets/images/portfolio-img2.png";
-import Img3 from "../../assets/images/portfolio-img3.png";
+import Work1 from "../../assets/images/Work1.jpg"
+import Work2 from "../../assets/images/Work2.png"
+import Work3 from "../../assets/images/Work3.png";
 
 const Projects = () => {
   return (
@@ -20,16 +20,18 @@ const Projects = () => {
                 estándar de las industrias desde el año 1500
               </p>
               <button className="btn btn-sm">View all projects</button>
+              
             </div>
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <a href=""></a>
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img1}
+                src={Work1}
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">Web Development</span>
+                <span className="text-gradient">AgroMarketplace</span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                 <span className="text-3xl text-white">Project Title</span>
@@ -39,29 +41,33 @@ const Projects = () => {
 
           <div className="flex-1 flex flex-col gap-y-10">
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <a href="https://apt-portfolio.vercel.app/"></a>
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img2}
+                src={Work2}
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">UI/UX Design</span>
+                <span className="text-gradient">Portfolio</span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white"><a href="https://apt-portfolio.vercel.app/" target="blank">Portfolio</a></span>
               </div>
             </div>
 
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+            
+
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img3}
+                src={Work3}
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">Movie App Design</span>
+                <span className="text-gradient"><a href="https://aptlify.vercel.app/" target="blank">Movie App Design</a></span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                 <span className="text-3xl text-white">Project Title</span>

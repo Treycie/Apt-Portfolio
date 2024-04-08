@@ -75,13 +75,13 @@
     background-image: url(../src/assets/images/site-bg.jpg);
   }
   .bg-about {
-    background-image: url(../src/assets/images/about.png);
+    background-image: url(../src/assets/images/about.jpg);
   }
   .text-accent {
     color: #B809C3; 
   }
   .lg\:bg-services {
-    background-image: url(../src/assets/images/about.png);
+    /* background-image: url(../src/assets/images/about.jpg); */
   }
   
   
